@@ -7,11 +7,12 @@ pipeline {
                 sh 'g++ hello.cpp -o hello_exec'
             }
         }
-        stage('Test') {
-            steps {
-                sh './hello_exec'
-            }
-        }
+       stage('Test') {
+    steps {
+        sh './invalid_command'
+    }
+}
+
         stage('Deploy') {
             steps {
                 echo 'Deployment stage executed'
